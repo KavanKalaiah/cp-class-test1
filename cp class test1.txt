@@ -9,3 +9,88 @@ printf("a is positive \n");
 }
 return 0;
 }
+
+//2nd program
+#include <stdio.h>
+int main()
+{
+int age;
+printf("Enter your age:");
+scanf("%d",&age);
+if (age >= 18)
+{
+printf("Eligible to vote \n");
+}
+else
+{
+printf("Not eligible to vote \n");
+}
+return 0;
+}
+
+//3rd programm
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a >= b && a >= c)
+    {
+        printf("Largest number = %d\n", a);
+    }
+    else if (b >= a && b >= c)
+    {
+        printf("Largest number = %d\n", b);
+    }
+    else
+    {
+        printf("Largest number = %d\n", c);
+    }
+
+    return 0;
+}
+
+//4th program
+#include <stdio.h>
+int main() {
+    char op;
+    double num1, num2, result;
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &op);
+
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+    switch(op) {
+   case '+':
+   result = num1 + num2;
+  printf("Result: %.2lf\n", result);
+ break;
+
+  case '-':
+  result = num1 - num2;
+  printf("Result: %.2lf\n", result);
+  break;
+
+  case '*':
+   result = num1 * num2;
+   printf("Result: %.2lf\n", result);
+   break;
+
+  case '/':
+  if (num2 == 0)
+   printf("Error! Division by zero.\n");
+   else {
+   result = num1 / num2;
+   printf("Result: %.2lf\n", result);
+   }
+  break;
+
+   default:
+   printf("Invalid operator!\n");
+    }
+    return 0;
+}
+
